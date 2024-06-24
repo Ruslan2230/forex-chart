@@ -1,8 +1,8 @@
 # **forex-chart**
-**npm install**
-**tsc**
-**npx http-server -c-1 -p 8080**
-**http://127.0.0.1:8080**
+# **npm install**
+# **tsc**
+# **npx http-server -c-1 -p 8080**
+# **http://127.0.0.1:8080**
 
 # **Task Description: ** 
 # **Forex market historical data is available. It is necessary to download this data and display it in a browser as a chart. An example of the chart can be viewed on any trading platform or in the desktop application ForexTester (downloadable here: forextester.com). The chart should only display bars, the price scale, and dates.**
