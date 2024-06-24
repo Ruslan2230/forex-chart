@@ -1,11 +1,11 @@
-# forex-chart
-# npm install
-# tsc
-# npx http-server -c-1 -p 8080  
-#  http://127.0.0.1:8080
+# **forex-chart**
+**npm install**
+**tsc**
+**npx http-server -c-1 -p 8080**
+**http://127.0.0.1:8080**
 
 # **Task Description: ** 
-# Forex market historical data is available. It is necessary to download this data and display it in a browser as a chart. An example of the chart can be viewed on any trading platform or in the desktop application ForexTester (downloadable here: forextester.com). The chart should only display bars, the price scale, and dates.
+# **Forex market historical data is available. It is necessary to download this data and display it in a browser as a chart. An example of the chart can be viewed on any trading platform or in the desktop application ForexTester (downloadable here: forextester.com). The chart should only display bars, the price scale, and dates.**
 
 When building and rendering the chart, you can only use TypeScript OOP. Only native canvas may be used for drawing, without any libraries. The chart should be scrollable and zoomable using the mouse (for example, zooming could be click and drag, and scrolling could be done with the mouse wheel). When designing the classes, consider that there might be multiple charts and the historical data they display could differ (although the data structure is the same).
 
