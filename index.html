@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Chart</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid #000;
+        }
+    </style>
+    <script type="module">
+			import { Chart } from './dist/chart.js';
+			import { parseData } from './dist/parseData.js';
+			import { fetchHistoricalData } from './dist/data.js';
+
+			async function main() {
+				const url = 'https://beta.forextester.com/data/api/Metadata/bars/chunked?Broker=Advanced&Symbol=EURUSD&Timeframe=1&Start=57674&End=59113&UseMessagePack=false';
+				try {
+					const data = await fetchHistoricalData(url);
+					console.log('Fetched data:', data);
+
+					const allBars = parseData(data);
+					const chart = new Chart('chartCanvas');
+					chart.setData(allBars);
+				} catch (error) {
+					console.error('Error in main function:', error);
+				}
+			}
+
+			main().catch(error => {
+				console.error('Error in main function:', error);
+			});
+    </script>
+</head>
+<body>
+<canvas id="chartCanvas" width="1000" height="600"></canvas>
+</body>
+</html>
